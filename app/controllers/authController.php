@@ -17,6 +17,8 @@ function onLogin()
 
     if (!empty($userConnected)) {
         echo "<script>alert('login success')</script>";
+        save('userConnected', $userConnected);
+
         if ($userConnected["role"] == "apprenant") {
             header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/apprenant/dashboard');
         } else if ($userConnected["role"] == "gerant") {
@@ -29,13 +31,14 @@ function onLogin()
 
 function onRegister()
 {
-    // var_dump($_POST);
     onAddApprenant($_POST);
-    // var_dump(getData('utilisateur'));
     header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/login');
 }
 
 function onLogout()
 {
     echo "logout succes";
+    removeData('userConnected');
+    header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/login');
+
 }

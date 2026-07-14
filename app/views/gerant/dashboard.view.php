@@ -63,7 +63,7 @@
         </div>
 
         <div class="p-4 border-t border-slate-100">
-            <a href="../../index.html" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl transition-all">
+            <a href="http://bah.mouhamadoufall.bah.odc.edu.sn:3001/logout" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-500 hover:bg-rose-50 hover:text-rose-600 rounded-xl transition-all">
                 <i class="fa-solid fa-arrow-right-from-bracket text-base"></i>
                 <span>Deconnexion</span>
             </a>
