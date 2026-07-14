@@ -9,7 +9,11 @@ function initSession()
 
 function save(string $key, array $data): void
 {
-    $_SESSION[$key] = $data;
+    if (!isset($_SESSION[$key])) {
+        $_SESSION[$key] = [];
+    }
+
+    $_SESSION[$key][] = $data;
 }
 
 function getData(string $key): array

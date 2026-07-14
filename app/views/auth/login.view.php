@@ -27,13 +27,13 @@
             
             <form action="http://bah.mouhamadoufall.bah.odc.edu.sn:3001/login" method="POST" class="space-y-4">
                 <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Email</label>
-                    <input type="email" placeholder="Saisir votre adresse mail" class="w-full border border-slate-200 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-orange-500">
+                    <label class="text-xs font-bold text-slate-500 uppercase tracking-wider" id="email">Email</label>
+                    <input type="email" name="email" placeholder="Saisir votre adresse mail" class="w-full border border-slate-200 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-orange-500">
                 </div>
                 
                 <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Mot de passe</label>
-                    <input type="password" placeholder="Saisir votre mot de passe" class="w-full border border-slate-200 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-orange-500">
+                    <label class="text-xs font-bold text-slate-500 uppercase tracking-wider" id="mdp">Mot de passe</label>
+                    <input type="password" name="mdp" placeholder="Saisir votre mot de passe" class="w-full border border-slate-200 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-orange-500">
                 </div>
                 
                <button type="submit" class=" text-center w-full bg-[#f28f44] hover:bg-[#e07d32] text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-orange-500/10">
@@ -43,10 +43,9 @@
             
             <p class="text-xs text-center text-slate-500">
                 vous n’avez pas de compte? 
-                <a href="./register.html" class="text-[#f28f44] font-bold hover:underline">S'inscrire</a>
+                <a href="http://bah.mouhamadoufall.bah.odc.edu.sn:3001/register" class="text-[#f28f44] font-bold hover:underline">S'inscrire</a>
             </p>
         </div>
-        
         <div class="bg-[#f28f44] hidden md:flex flex-col justify-center items-center relative overflow-hidden p-12 text-white">
             <div class="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-white/10"></div>
             <div class="absolute -bottom-16 -left-16 w-80 h-80 rounded-full bg-white/5"></div>

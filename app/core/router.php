@@ -3,7 +3,7 @@
 // var_dump($_SERVER["SERVER_NAME"], $_SERVER["REQUEST_URI"]);
 
 $routes = [
-    "/" => "",
+    "/" => "authController/login",
     "/login" => "authController/login",
     "/register" => "authController/register",
     "/logout" => "authController/logout",
