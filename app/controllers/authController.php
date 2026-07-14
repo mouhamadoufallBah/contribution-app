@@ -1,5 +1,5 @@
 <?php
-require_once(MODEL_PATH.'/apprenant.model.php');
+require_once(MODEL_PATH . '/apprenant.model.php');
 
 function showLoginPage()
 {
@@ -14,16 +14,17 @@ function showRegisterPage()
 function onLogin()
 {
     $userConnected = findUtilisateurByEmail($_POST);
-    
-    if (!empty($userConnected)) {
-        var_dump($userConnected);die;
-    }else{
-        // header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/login');
-        // var_dump('login mot de pass incorecte');die;
-        echo "<script>alert('login ou mot de passe incorect')</script>";
 
+    if (!empty($userConnected)) {
+        echo "<script>alert('login success')</script>";
+        if ($userConnected["role"] == "apprenant") {
+            header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/apprenant/dashboard');
+        } else if ($userConnected["role"] == "gerant") {
+            header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/gerant/dashboard');
+        }
+    } else {
+        echo "<script>alert('login ou mot de passe incorect')</script>";
     }
-    // header('Location: http://bah.mouhamadoufall.bah.odc.edu.sn:3001/gerant/dashboard');
 }
 
 function onRegister()
